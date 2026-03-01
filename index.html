@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostilas | 8º ano</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Paleta Minimalista Roxa */
+        :root {
+            --bg-color: #000000;
+            --primary-purple: #6c5ce7;
+            --dark-purple: #2d3436;
+            --card-bg: #0e0b26;
+            --text-gray: #ffffff;
+            --border-color: #490265;
+            --online-green: #00ff2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--dark-purple);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Cabeçalho Limpo */
+        header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            font-weight: 300;
+        }
+
+        /* Container */
+        main {
+            width: 90%;
+            max-width: 900px;
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Cartões Minimalistas */
+        .card {
+            background-color: var(--card-bg);
+            border: 4px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.05);
+            border-color: var(--primary-purple);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+            border-left: 3px solid var(--text-gray);
+            padding-left: 15px;
+        }
+
+        /* Lista de Links */
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a.link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: var(--text-gray);
+            padding: 12px 15px;
+            border-radius: 8px;
+            background: #000000;
+            border: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        a.link-btn:hover {
+            background: var(--primary-purple);
+            color: #fff;
+            border-color: var(--primary-purple);
+        }
+
+        a.link-btn::after {
+            content: '→';
+            font-size: 1.1rem;
+            opacity: 0.5;
+        }
+
+        a.link-btn:hover::after {
+            opacity: 1;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apostilas 8º Ano</h1>
+        <p class="subtitle">Material de apoio e respostas</p>
+    </header>
+
+    <main>
+        <div class="grid-container">
+            
+            <div class="card">
+                <h2>Português e Matemática</h2>
+                <ul>
+                    <li><a href="https://acervocmsp.educacao.sp.gov.br/150917/1502156.pdf" class="link-btn">1º Bimestre</a></li>
+                    <li><a href="#" class="link-btn">2º Bimestre</a></li>
+                    <li><a href="#" class="link-btn">3º Bimestre</a></li>
+                    <li><a href="#" class="link-btn">4º Bimestre</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Ciências, História, Geografia, Projeto de vida e Inglês</h2>
+                <ul>
+                    <li><a href="#" class="link-btn">1º Bimestre</a></li>
+                    <li><a href="#" class="link-btn">2º Bimestre</a></li>
+                    <li><a href="#" class="link-btn">3º Bimestre</a></li>
+                    <li><a href="#" class="link-btn">4º Bimestre</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 • Conteúdo Educacional • Status: <span style="color: var(--online-green);">Online</span></p>
+    </footer>
+
+</body>
+</html>
